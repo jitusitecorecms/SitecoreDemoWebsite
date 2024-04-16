@@ -1319,6 +1319,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="App_Config\Custom\MSD_SiteDefinition.config" />
+    <Content Include="App_Config\Custom\SiteDefinition.config.example" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1327,6 +1329,7 @@
     <Content Include="Views\Menu\Menu.cshtml" />
     <Content Include="Views\HeroBanner\HeroBanner.cshtml" />
     <Content Include="Views\CTA\CTA.cshtml" />
+    <Content Include="Sitecore Package\My Demo Website-1.0.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
