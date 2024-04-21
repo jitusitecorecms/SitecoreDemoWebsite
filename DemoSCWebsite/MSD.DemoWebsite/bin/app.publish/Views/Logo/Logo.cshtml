@@ -1,0 +1,11 @@
+﻿@*<a href="/">
+        <img src="/Images/Logo.png" alt="My Sitecore Diaries" style="max-width: 150px;">
+    </a>*@
+
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+<a href="/msd">
+
+    @Html.Sitecore().Field("Image", RenderingContext.Current.ContextItem, new { @mw = 150 })
+   
+</a>

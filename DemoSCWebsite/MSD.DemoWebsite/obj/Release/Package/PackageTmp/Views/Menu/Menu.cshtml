@@ -1,0 +1,24 @@
+﻿@*<nav>
+        <a href="#">Home</a>
+        <a href="https://www.youtube.com/MySitecoreDiaries">YouTube</a>
+    </nav>*@
+
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@{
+    var childItems = Model.GetChildren();
+}
+
+<nav>
+    @foreach (var item in childItems)
+    {
+        var linkField = (Sitecore.Data.Fields.LinkField)item.Fields["Link"];
+        var menuUrl = string.IsNullOrEmpty(linkField.GetFriendlyUrl()) ? "#" : linkField.GetFriendlyUrl();
+        var menuTargetUrl = string.IsNullOrEmpty(linkField.Target) ? "_self" : linkField.Target;
+
+     <a href="@menuUrl" target="@menuTargetUrl">@Html.Sitecore().Field("Title", item)</a>
+
+        @*<a href="#">Home</a>
+            <a href="https://www.youtube.com/MySitecoreDiaries">YouTube</a>*@
+    }
+</nav>

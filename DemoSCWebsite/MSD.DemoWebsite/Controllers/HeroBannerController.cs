@@ -9,15 +9,10 @@ namespace MSD.DemoWebsite.Controllers
 {
     public class HeroBannerController : Sitecore.Mvc.Controllers.SitecoreController
     {
-        // GET: HeroBanner
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult HeroBanner()
         {
-            return View();
+            var dataSourceItem = RenderingContext.Current.ContextItem;
+            return View(dataSourceItem);
         }
 
 

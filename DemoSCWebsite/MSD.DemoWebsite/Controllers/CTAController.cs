@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sitecore.Mvc.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,17 +7,12 @@ using System.Web.Mvc;
 
 namespace MSD.DemoWebsite.Controllers
 {
-    public class CTAController : Controller
+    public class CTAController : Sitecore.Mvc.Controllers.SitecoreController
     {
-        // GET: CTA
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult CTA()
         {
-            return View();
+            var dataSourceItem = RenderingContext.Current.ContextItem;
+            return View(dataSourceItem);
         }
     }
 }
