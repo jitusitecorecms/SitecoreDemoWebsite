@@ -1,0 +1,62 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+<style>
+    .banner {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+        .banner-content h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .banner-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+</style>
+@if (Model != null)
+{
+    <div class="banner">
+        @Html.Sitecore().Field("Image", Model)
+        <div class="banner-content">
+            <h1>@Html.Sitecore().Field("Title", Model)</h1>
+            <p>@Html.Sitecore().Field("Description", Model)</p>
+            @Html.Sitecore().Field("Link", Model, new { @class = "btn" })
+        </div>
+    </div>
+}
+else
+{
+    <div class="banner">No Datasource</div>
+}

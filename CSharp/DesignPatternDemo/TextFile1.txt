@@ -1,0 +1,78 @@
+﻿//Observer
+        static void Main(string[] args)
+        {
+            var subject = new ConcreteSubject();
+            var observerA = new ConcreteObserverA();
+            var observerB = new ConcreteObserverB();
+
+            subject.Attach(observerA);
+            subject.Attach(observerB);
+
+            subject.SomeBusinessLogic();
+            subject.SomeBusinessLogic();
+
+            Console.ReadKey();
+        }
+
+        //Factory
+        static void Main(string[] args)
+        {
+            int productType = 0;
+            Console.WriteLine("Enter 1 for Product A price and 2 for Product B price");
+            productType = Convert.ToInt32(Console.ReadLine());
+            IProduct product = ProductFactory.GetProduct(productType);
+            Console.WriteLine(string.Format("{0} price is : Rs. {1}", product.GetProductName(), product.GetPrice()));
+            Console.ReadKey();
+        }
+        //Singlton
+        //static void Main(string[] args)
+        //{
+        //    Singleton singleton = Singleton.Instance;
+        //    singleton.SayHIFromSingleton();
+
+        //    // Verify that only one instance is created
+        //    Singleton anotherSingleton = Singleton.Instance;
+        //    Console.WriteLine(ReferenceEquals(singleton, anotherSingleton)); // Output: True
+        //    Console.ReadLine();
+        //}
+
+
+         //Observer
+        static void Main(string[] args)
+        {
+            var subject = new ConcreteSubject();
+            var observerA = new ConcreteObserverA();
+            var observerB = new ConcreteObserverB();
+
+            subject.Attach(observerA);
+            subject.Attach(observerB);
+
+            subject.SomeBusinessLogic();
+            subject.SomeBusinessLogic();
+
+            Console.ReadKey();
+        }
+
+
+
+        Product product = new Product { Name = "Laptop", Weight = 2.5 };
+
+            // Using Standard Shipping
+            product.SetShippingStrategy(new StandardShippingStrategy());
+            Console.WriteLine($"Standard Shipping Cost: ${product.CalculateShippingCost()}");
+
+            // Using Express Shipping
+            product.SetShippingStrategy(new ExpressShippingStrategy());
+            Console.WriteLine($"Express Shipping Cost: ${product.CalculateShippingCost()}");
+
+            // Using International Shipping
+            product.SetShippingStrategy(new InternationalShippingStrategy());
+            Console.WriteLine($"International Shipping Cost: ${product.CalculateShippingCost()}");
+
+             Decorators.IProduct myProduct = new BasicProduct();
+            Console.WriteLine($"{myProduct.GetProductName()} - ${myProduct.GetCost()}");
+
+            myProduct = new WarrantyDecorator(myProduct);
+            Console.WriteLine($"{myProduct.GetProductName()} - ${myProduct.GetCost()}");
+
+            Console.ReadKey();
