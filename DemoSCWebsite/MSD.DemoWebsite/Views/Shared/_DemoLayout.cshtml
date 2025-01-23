@@ -1,6 +1,9 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Helpers
 @using Sitecore.Mvc.Presentation
+@using Sitecore.ExperienceForms.Mvc
+@using Sitecore.ExperienceForms.Mvc.Html
+@using Sitecore.Mvc.Analytics.Extensions
 
 @{
     Layout = null;
@@ -11,6 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sitecore%20modules/Web/ExperienceForms/css/form.css" />
     <title>Demo Website</title>
     <style>
         /* Basic styles */
@@ -129,11 +133,21 @@
 
 
     <header>
-        @Html.Sitecore().Placeholder("header")      
+        @Html.Sitecore().Placeholder("header")
     </header>
 
     @Html.Sitecore().Placeholder("main")
-    
-    
+
+    <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery-3.4.1.min.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.min.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.validate.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.tracking.js"></script>
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.conditions.js"></script>
+
+
+    @*@Html.RenderFormStyles()
+    @Html.RenderFormScripts()*@
 </body>
 </html>

@@ -709,3 +709,4 @@ C:\Jitendra\YT\Demo Website\SitecoreDemoWebsite\DemoSCWebsite\MSD.DemoWebsite\bi
 C:\Jitendra\YT\Demo Website\SitecoreDemoWebsite\DemoSCWebsite\MSD.DemoWebsite\obj\Debug\MSD.DemoWebsite.csproj.CoreCompileInputs.cache
 C:\Jitendra\YT\Demo Website\SitecoreDemoWebsite\DemoSCWebsite\MSD.DemoWebsite\obj\Debug\MSD.DemoWebsite.dll
 C:\Jitendra\YT\Demo Website\SitecoreDemoWebsite\DemoSCWebsite\MSD.DemoWebsite\obj\Debug\MSD.DemoWebsite.pdb
+C:\Jitendra\YT\Demo Website\SitecoreDemoWebsite\DemoSCWebsite\MSD.DemoWebsite\obj\Debug\MSD.DemoWebsite.csproj.AssemblyReference.cache

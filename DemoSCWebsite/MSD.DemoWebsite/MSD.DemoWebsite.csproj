@@ -1684,6 +1684,7 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <None Include="Global.asax" />
+    <Content Include="Custom Script\MyCustom.js" />
     <Content Include="Views\SXABanner\SXABanner.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
@@ -1698,6 +1699,7 @@
     </Compile>
     <Compile Include="Models\BannerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validator\AlphanumericValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
