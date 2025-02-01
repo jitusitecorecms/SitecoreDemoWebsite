@@ -1694,6 +1694,7 @@
     <Compile Include="Controllers\HeroBannerController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SXABannerController.cs" />
+    <Compile Include="CustomSubmitAction\SendDataToThirdParty.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
