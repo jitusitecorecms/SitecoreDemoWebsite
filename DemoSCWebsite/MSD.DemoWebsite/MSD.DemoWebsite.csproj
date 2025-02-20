@@ -1686,6 +1686,7 @@
     <None Include="Global.asax" />
     <Content Include="Custom Script\MyCustom.js" />
     <Content Include="Views\SXABanner\SXABanner.cshtml" />
+    <Content Include="Views\FormBuilder\FieldTemplates\GoogleRecaptchaV3.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1694,6 +1695,8 @@
     <Compile Include="Controllers\HeroBannerController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SXABannerController.cs" />
+    <Compile Include="Custom Fields\Captcha\CaptchaV3Validator.cs" />
+    <Compile Include="Custom Fields\Captcha\GoogleRecaptchaV3.cs" />
     <Compile Include="CustomSubmitAction\SendDataToThirdParty.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
